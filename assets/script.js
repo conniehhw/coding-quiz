@@ -29,20 +29,31 @@ function clearContainer() {
 function printResults() {
   var body = document.body;
 
-  var h1El = document.createElement("h1");
-  var h2El = document.createElement("h2");
-  var h3El = document.createElement("h3");
-  var h4El = document.createElement("h4");
+  var q1El = document.createElement("h2");
 
-  h1El.textContent = "Commonly used data types DO Not include: ";
-  h2El.textContent = "1. strings ";
-  h3El.textContent = "2. booleans";
-  h4El.textContent = "3. alerts";
+  // create ordered list items
 
-  body.appendChild(h1El);
-  body.appendChild(h2El);
-  body.appendChild(h3El);
-  body.appendChild(h4El);
+  var c1El = document.createElement("button");
+  var c2El = document.createElement("button");
+  var c3El = document.createElement("button");
+
+  q1El.textContent = "Commonly used data types DO Not include: ";
+  c1El.textContent = "1. strings";
+  c2El.textContent = "2. booleans ";
+  c3El.textContent = "3. alerts ";
+
+  body.appendChild(q1El);
+  body.appendChild(c1El);
+  body.appendChild(c2El);
+  body.appendChild(c3El);
+
+  q1El.setAttribute(
+    "style",
+    "margin:auto; width:50%; font-size:25px text-align:center;"
+  );
+  c1El.style.backgroundColor = "orange";
+  c2El.style.backgroundColor = "orange";
+  c3El.style.backgroundColor = "orange";
 }
 
 var startButton = document.querySelector("#button");
@@ -50,4 +61,20 @@ var startButton = document.querySelector("#button");
 startButton.addEventListener("click", () => {
   clearContainer();
   printResults();
+});
+
+(function () {
+  var questions = [
+    {
+      question: "Commonly used data types DO Not include: ",
+      choices: ["strings", "booleans", "alerts", "numbers"],
+      correctAnswer: "alerts",
+    },
+    {
+      question:
+        "The condition in an if / else statement is enclosed with _______.",
+      choices: ["quotes", "curly brackets", "parenthesis", "square brackets"],
+      correctAnswer: "curly brackets",
+    },
+  ];
 });
