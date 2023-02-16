@@ -1,6 +1,6 @@
 # Coding Quiz
 
-Link to live site: [https:///](https:///)
+Link to live site: [https://conniehhw.github.io/coding-quiz/](https://conniehhw.github.io/coding-quiz/)
 
 ## Description
 
